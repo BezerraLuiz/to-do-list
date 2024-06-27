@@ -8,7 +8,12 @@ function Navbar() {
     <>
       <nav id={styles.navbar}>
         <ul><img id={styles.logo} src={logo}/></ul>
-        <ul><h1 id={styles.titulo}>My Tasks</h1></ul>
+          <div className={styles.container_btn}>
+          <button className={styles.btn}>Exibir todas</button>
+          <button className={styles.btn}>Em espera</button>
+          <button className={styles.btn}>Em andamento</button>
+          <button className={styles.btn}>Encerradas</button>
+        </div>
         <ul><img src={login}/></ul>
       </nav>
     </>

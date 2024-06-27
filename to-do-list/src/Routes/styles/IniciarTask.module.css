@@ -1,0 +1,33 @@
+#container_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container_task {
+  width: 1280px;
+  height: 600px;
+  border: 2.5px solid black;
+  border-radius: 10px;
+  margin: 50px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label_form {
+  margin: 10px 0px 2.5px 10px;
+}
+
+.input_form {
+  width: 300px;
+  height: 30px;
+  padding: 5px;
+  margin: 0px 0px 2.5px 10px;
+  border: 2.5px solid #c95555;
+  border-radius: 7px;
+  background-color: white;
+  color: black;
+}
