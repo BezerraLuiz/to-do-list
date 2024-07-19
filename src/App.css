@@ -1,0 +1,101 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(149, 138, 158);
+}
+
+.app .container {
+  position: relative;
+  width: 100vh;
+  height: 80vh;
+  border: 10px solid rgb(107, 52, 151);
+  background-color: white;
+  border-radius: 10px;
+}
+
+.container h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+
+.container .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.form .container_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 300px;
+  height: 50px;
+  border: 3px solid rgb(107, 52, 151);
+  border-radius: 10px;
+}
+
+.container_input .input {
+  width: 100%;
+  height: 70%;
+  border: none;
+  padding: 5px;
+  margin: 10px;
+  outline: none;
+}
+
+.container_input button {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(107, 52, 151);
+  border: none;
+  color: white;
+  font-size: 40px;
+}
+
+.container_input .icons {
+  margin: 10px 15px;
+  font-size: 30px;
+}
+
+.app .separador {
+  width: 100%;
+  height: 5px;
+  background-color: rgb(107, 52, 151);
+  margin: 25px 0 25px;
+}
+
+.app .tasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 50px;
+  margin: 10px;
+  border: 3px solid rgb(31, 4, 53);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.tasks .action-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;  
+}
+
+.tasks .check-task {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(31, 4, 53);
+  border-radius: 100%;
+}
+
+.tasks .icons {
+  font-size: 30px;
+}
