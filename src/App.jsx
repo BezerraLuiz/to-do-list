@@ -15,12 +15,6 @@ function App() {
     if (nameTask != "") {
       // Adiciono dentro do setTask, o nameTask que foi recebido através do 'value' no input.
       setTasks([...tasks, { name: nameTask, id: Date.now() }]);
-      console.log(
-        "Array de tasks: " +
-          tasks.forEach((task) => {
-            console.log(task);
-          })
-      );
       setNameTask("");
     }
   };
@@ -33,6 +27,13 @@ function App() {
   const filteredTasks = tasks.filter((task) =>
     task.name.toLowerCase().includes(pesquisa.toLowerCase())
   );
+
+  const toggleCheckTask = (id) => {    
+    const checkTask = tasks.map((task) =>
+      task.id == id ? {...task, checked: !task.checked } : task
+    );
+    setTasks(checkTask)
+  };
 
   return (
     <>
@@ -74,7 +75,13 @@ function App() {
             <div key={task.id} className="tasks">
               <h3>{task.name}</h3>
               <div className="action-task">
-                <span className="check-task"></span>
+                <span
+                  className="check-task"
+                  style={{
+                    backgroundColor: task.checked ? "black" : "white"
+                  }}
+                  onClick={() => toggleCheckTask(task.id)}
+                ></span>
                 <MdDelete
                   className="icons"
                   onClick={() => deleteTask(task.id)}
