@@ -1,3 +1,4 @@
+// App.js
 import { useState } from "react";
 import "./App.css";
 import { FaSearch } from "react-icons/fa";
@@ -12,15 +13,14 @@ function App() {
   const criarTask = (event) => {
     event.preventDefault();
 
-    if (nameTask != "") {
-      // Adiciono dentro do setTask, o nameTask que foi recebido através do 'value' no input.
+    if (nameTask !== "") {
       setTasks([...tasks, { name: nameTask, id: Date.now() }]);
       setNameTask("");
     }
   };
 
   const deleteTask = (id) => {
-    const filterIdTasks = tasks.filter((task) => task.id != id);
+    const filterIdTasks = tasks.filter((task) => task.id !== id);
     setTasks(filterIdTasks);
   };
 
@@ -30,47 +30,47 @@ function App() {
 
   const toggleCheckTask = (id) => {    
     const checkTask = tasks.map((task) =>
-      task.id == id ? {...task, checked: !task.checked } : task
+      task.id === id ? { ...task, checked: !task.checked } : task
     );
-    setTasks(checkTask)
+    setTasks(checkTask);
   };
 
   return (
-    <>
-      <div className="app">
-        <div className="container">
-          <h1>Tarefas</h1>
-          <div className="form">
-            <form onSubmit={(e) => e.preventDefault()}>
-              <div className="container_input">
-                <input
-                  className="input"
-                  type="text"
-                  placeholder="Pesquisar task"
-                  value={pesquisa}
-                  onChange={(event) => setPesquisa(event.target.value)}
-                />
-                <FaSearch className="icons" />
-              </div>
-            </form>
-            <form onSubmit={criarTask}>
-              <div className="container_input">
-                <input
-                  className="input"
-                  type="text"
-                  placeholder="Criar nova task"
-                  value={nameTask}
-                  onChange={(event) => setNameTask(event.target.value)}
-                />
-                <button>
-                  <IoIosAdd />
-                </button>
-              </div>
-            </form>
-          </div>
+    <div className="app">
+      <div className="container">
+        <h1>Tarefas</h1>
+        <div className="form">
+          <form onSubmit={(e) => e.preventDefault()}>
+            <div className="container_input">
+              <input
+                className="input"
+                type="text"
+                placeholder="Pesquisar task"
+                value={pesquisa}
+                onChange={(event) => setPesquisa(event.target.value)}
+              />
+              <FaSearch className="icons" />
+            </div>
+          </form>
+          <form onSubmit={criarTask}>
+            <div className="container_input">
+              <input
+                className="input"
+                type="text"
+                placeholder="Criar nova task"
+                value={nameTask}
+                onChange={(event) => setNameTask(event.target.value)}
+              />
+              <button>
+                <IoIosAdd />
+              </button>
+            </div>
+          </form>
+        </div>
 
-          <div className="separador"></div>
+        <div className="separador"></div>
 
+        <div className="tasks-container">
           {filteredTasks.map((task) => (
             <div key={task.id} className="tasks">
               <h3>{task.name}</h3>
@@ -78,7 +78,7 @@ function App() {
                 <span
                   className="check-task"
                   style={{
-                    backgroundColor: task.checked ? "black" : "white"
+                    backgroundColor: task.checked ? "black" : "white",
                   }}
                   onClick={() => toggleCheckTask(task.id)}
                 ></span>
@@ -91,7 +91,7 @@ function App() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,101 +1,78 @@
+/* App.css */
 .app {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: rgb(149, 138, 158);
+  background-color: #f5f5f5;
 }
 
-.app .container {
-  position: relative;
-  width: 100vh;
-  height: 80vh;
-  border: 10px solid rgb(107, 52, 151);
-  background-color: white;
-  border-radius: 10px;
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 500px;
 }
 
-.container h1 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 10px;
+.form {
+  margin-bottom: 20px;
 }
 
-.container .form {
+.container_input {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
-.form .container_input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  width: 300px;
-  height: 50px;
-  border: 3px solid rgb(107, 52, 151);
-  border-radius: 10px;
+.input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-.container_input .input {
-  width: 100%;
-  height: 70%;
-  border: none;
-  padding: 5px;
-  margin: 10px;
-  outline: none;
-}
-
-.container_input button {
-  width: 50%;
-  height: 100%;
-  background-color: rgb(107, 52, 151);
+button {
+  background-color: #39B97B;
   border: none;
   color: white;
-  font-size: 40px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.container_input .icons {
-  margin: 10px 15px;
-  font-size: 30px;
+.icons {
+  margin-left: 10px;
+  cursor: pointer;
 }
 
-.app .separador {
-  width: 100%;
-  height: 5px;
-  background-color: rgb(107, 52, 151);
-  margin: 25px 0 25px;
+.separador {
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px 0;
 }
 
-.app .tasks {
+.tasks {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  height: 50px;
-  margin: 10px;
-  border: 3px solid rgb(31, 4, 53);
-  padding: 10px;
-  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.tasks .action-task {
+.action-task {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 10px;  
 }
 
-.tasks .check-task {
+.check-task {
   width: 20px;
   height: 20px;
-  border: 2px solid rgb(31, 4, 53);
-  border-radius: 100%;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.tasks .icons {
-  font-size: 30px;
+.tasks-container {
+  max-height: 300px; /* Ajuste conforme necessário */
+  overflow-y: auto;
 }

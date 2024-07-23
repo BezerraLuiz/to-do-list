@@ -4,3 +4,7 @@
   box-sizing: border-box;
   font-family: Helvetica;
 }
+
+body {
+  background-color: rgb(149, 138, 158);;
+}
